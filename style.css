@@ -1,15 +1,19 @@
+body{
+    text-align: center;
+}
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px; /* Adjust width as needed */
+    width: 800px; 
     height: 80vh;
     margin: 0 auto;
+    border: 1px solid black;
 }
 
+/* GRID BOX */
 .grid-item {
     width: calc(100% / 16);
     height: calc(100% / 16);
-    border: 1px solid #000;
     box-sizing: border-box;
 }
 
