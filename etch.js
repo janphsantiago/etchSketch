@@ -1,19 +1,27 @@
-const gridContainer = document.getElementById("gridContainer");
+const generateGridBtn = document.getElementById("generateGridBtn");
 
-// Create 16x16 grid
-for (let i = 0; i < 16 * 16; i++) {
-    const gridItem = document.createElement("div");
-    gridItem.classList.add("grid-item");
 
-    // Change background color on mouseover
-    gridItem.addEventListener("mouseover", function() {
-        gridItem.style.backgroundColor = "black"; 
-    });
+generateGridBtn.addEventListener("click", function() {
+    // Prompt the user to enter the number of grid squares
+    const rowSquares = parseInt(prompt("Enter the number of grid squares (e.g., 16 for a 16x16 grid):"));
+    // Clear existing grid
+    const gridContainer = document.getElementById("gridContainer");
+    gridContainer.innerHTML = "";
 
-    gridContainer.appendChild(gridItem);
-}
+    // Create grid squares
+    for (let i = 0; i < rowSquares * rowSquares; i++) {
 
-const promptBtn = document.querySelector('button');
-promptBtn.addEventListener("click", function() {
-    gridNum = parseInt(prompt("Enter number of grid:"));
+        //gridItem = grid squares in a grid
+        const gridItem = document.createElement("div");
+        // set a style on grid squares on a grid sized 500px x 500px
+        gridItem.setAttribute("style", "height: " + (500/rowSquares) + "px; width: " + (500/rowSquares) + "px;")
+        gridItem.classList.add("grid-item");
+
+        // Add mouseover event listener
+        gridItem.addEventListener("mouseover", function() {
+            gridItem.style.backgroundColor = "black";
+        });
+
+        gridContainer.appendChild(gridItem);
+    }
 });
