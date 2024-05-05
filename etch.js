@@ -2,11 +2,17 @@ const generateGridBtn = document.getElementById("generateGridBtn");
 
 
 generateGridBtn.addEventListener("click", function() {
-    // Prompt the user to enter the number of grid squares
-    const rowSquares = parseInt(prompt("Enter the number of grid squares (e.g., 16 for a 16x16 grid):"));
+    
     // Clear existing grid
     const gridContainer = document.getElementById("gridContainer");
     gridContainer.innerHTML = "";
+    
+    // Prompt the user to enter the number of grid squares
+    let rowSquares = parseInt(prompt("Enter the number of grid squares (1 - 100):"));
+
+    while (rowSquares < 0 || rowSquares > 100) {
+         rowSquares =  parseInt(prompt("ERROR! Please enter a valid number"));
+         }
 
     // Create grid squares
     for (let i = 0; i < rowSquares * rowSquares; i++) {
