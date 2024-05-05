@@ -4,12 +4,15 @@ body{
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 500px; 
-    height: 500px;
+    width: 650px; 
+    height: 650px;
     margin: 0 auto;
     border: 1px solid black;
 }
-
+#generateGridBtn{
+    padding: 20px;
+    margin-bottom: 20px;;
+}
 /* GRID BOX */
 .grid-item {
     width: calc(100% / 16);

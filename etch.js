@@ -19,13 +19,18 @@ generateGridBtn.addEventListener("click", function() {
 
         //gridItem = grid squares in a grid
         const gridItem = document.createElement("div");
-        // set a style on grid squares on a grid sized 500px x 500px
-        gridItem.setAttribute("style", "height: " + (500/rowSquares) + "px; width: " + (500/rowSquares) + "px;")
+        // set a style on grid squares on a grid sized 650 x 650
+        gridItem.setAttribute("style", "height: " + (650/rowSquares) + "px; width: " + (650/rowSquares) + "px;")
         gridItem.classList.add("grid-item");
 
         // Add mouseover event listener
         gridItem.addEventListener("mouseover", function() {
-            gridItem.style.backgroundColor = "black";
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+              }
+            gridItem.style.backgroundColor = color;
         });
 
         gridContainer.appendChild(gridItem);
