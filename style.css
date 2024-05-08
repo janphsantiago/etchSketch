@@ -1,6 +1,11 @@
 body{
     text-align: center;
 }
+.powerBtns{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 .grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -10,8 +15,8 @@ body{
     border: 1px solid black;
 }
 button{
-    padding: 20px;
-    margin-bottom: 20px;;
+    padding: 15px;
+    margin-bottom: 10px;
 }
 button:hover{
     cursor: pointer;
