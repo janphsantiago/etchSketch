@@ -9,9 +9,12 @@ body{
     margin: 0 auto;
     border: 1px solid black;
 }
-#generateGridBtn{
+button{
     padding: 20px;
     margin-bottom: 20px;;
+}
+button:hover{
+    cursor: pointer;
 }
 /* GRID BOX */
 .grid-item {
