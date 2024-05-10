@@ -8,19 +8,9 @@ h1 {
     text-align: center;
     color: #1E90FF;
 }
-
 .powerBtns {
     text-align: center;
     margin-top: 20px;
-}
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 650px; 
-    height: 650px;
-    margin: 0 auto;
-    border: 1px solid black;
-    cursor: pointer;
 }
 button{
     padding: 10px 20px;
@@ -33,11 +23,20 @@ button{
     font-size: 16px;
     font-weight: 300;
 }
-
 button:hover {
     background-color: #1E90FF;
 }
 
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px; 
+    height: 650px;
+    margin: 0 auto;
+    border: 1px solid black;
+    cursor: pointer;
+}
 /* GRID BOX */
 .grid-item {
     width: calc(100% / 16);
@@ -45,4 +44,16 @@ button:hover {
     box-sizing: border-box;
     border: 1px solid black;
 }
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .grid-item {
+        width: calc(100% / 4); 
+        height: calc(100% / 4); /* Adjusting to 4 rows for smaller screens */
+    }
+    }
 
