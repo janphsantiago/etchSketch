@@ -1,10 +1,17 @@
 body{
-    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
 }
-.powerBtns{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+h1 {
+    text-align: center;
+    color: #1E90FF;
+}
+
+.powerBtns {
+    text-align: center;
+    margin-top: 20px;
 }
 .grid-container {
     display: flex;
@@ -13,14 +20,24 @@ body{
     height: 650px;
     margin: 0 auto;
     border: 1px solid black;
-}
-button{
-    padding: 15px;
-    margin-bottom: 10px;
-}
-button:hover{
     cursor: pointer;
 }
+button{
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #40E0D0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button:hover {
+    background-color: #1E90FF;
+}
+
 /* GRID BOX */
 .grid-item {
     width: calc(100% / 16);
